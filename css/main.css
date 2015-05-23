@@ -1,0 +1,25 @@
+body {
+  font-family: "Open Sans";
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+h1, h2, h3 {
+  font-weight: 300; }
+
+header {
+  background: #03A9F4;
+  height: 60px;
+  color: white;
+  overflow: hidden; }
+  header h2 {
+    margin-top: 15px; }
+
+main {
+  flex: 1; }
+
+footer {
+  height: 60px;
+  background: #404040; }
+
+/*# sourceMappingURL=main.css.map */

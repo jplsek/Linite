@@ -1,0 +1,37 @@
+// This is the main css / overwrites 
+
+// variables
+$blue-bg: #03A9F4;
+$gray-bg: #404040;
+
+// elements
+body {
+    font-family: "Open Sans";
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1,h2,h3 {
+    font-weight:300;
+}
+
+header {
+    background: $blue-bg;
+    height: 60px;
+    color: white;
+    overflow: hidden;
+    
+    h2 {
+        margin-top: 15px;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    height: 60px;
+    background: $gray-bg;
+}
