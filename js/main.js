@@ -4,7 +4,7 @@
 var apps = null;
 
 // Generated info
-var distro = null;
+var distro = "ubuntu"; // set default distro
 var appList = [];
 
 // load apps.json, with a deferred object.
@@ -28,45 +28,32 @@ function getapps(d1) {
     });
 }
 
-// run this after the apps.json is loaded
+// run this after the apps.json is loaded.
 function main() {
     console.log(apps);
+    $("#ubuntu-select").prop("checked", true);
+    distroSelect();
 }
 
+// set up package manager here. Probably should implement this into the json.
 function addDistro() {
     $("#apps").empty();
-    if (distro == "debian")
-        $("#apps").append("sudo apt-get install ");
-    if (distro == "fedora")
-        $("#apps").append("sudo yum install ");
+    if (distro == "ubuntu" || distro == "debian")
+        $("#apps").append("sudo apt-get install");
+    else if (distro == "arch")
+        $("#apps").append("sudo pacman -S");
+    else if (distro == "fedora")
+        $("#apps").append("sudo yum install");
+    else
+        console.log("Distro not supported, please implement.");
 }
 
-function appendAppList() {
-    console.log("test");
-    addDistro();
-    for (app in appList) {
-        console.log(app);
-        $("#apps").append(appList[app] + " ");
-    }
-}
-
-$(document).ready(function() {
-    var d1 = $.Deferred();
-    getapps(d1);
-
-    $.when(d1).done(function() {
-        main();
-    });
-});
-
-// assuming apps is generated
-// generates the application picker
-$("#distro-choice input").click(function() {
+// assumes distro is set.
+// generates the category list
+function distroSelect() {
 
     // remove all elements in app-choice before generating
     $("#app-choice").empty();
-
-    distro = this.value
 
     console.log("Distro: " + distro);
 
@@ -95,8 +82,8 @@ $("#distro-choice input").click(function() {
     $.each(types, function (array, category) {
         // 1. selects category
         $.each(category, function (categoryName, subObject) {
-            console.log(categoryName);
-            html = "<div class=\"category\"><h4>" + categoryName + "</h4>";
+            //console.log(categoryName);
+            html = "<div class=\"category col-xs-12 col-sm-3\"><h4>" + categoryName + "</h4>";
             // 2. selects 1st array item
             $.each(subObject, function (array, subObject) {
                 //console.log("2: " + subI + "=" + subObject);
@@ -108,7 +95,7 @@ $("#distro-choice input").click(function() {
                     var appProg = null;
                     // 4. selects app values
                     $.each(subObject, function (name, value) {
-                        console.log("4: " + name + "=" + value);
+                        //console.log("4: " + name + "=" + value);
 
                         switch(name) {
                             case "name":
@@ -125,7 +112,7 @@ $("#distro-choice input").click(function() {
 
                     html += "<label><input type=\"checkbox\" name=\"appProg\" value=\"" + appProg + "\"> ";
                     html += "<img src=\"img/" + appImg + "\" alt=\"\">";
-                    html += "<span>" + appName + "</span></label>";
+                    html += "<span>" + appName + "</span></label><br>";
                 });
             });
 
@@ -133,9 +120,34 @@ $("#distro-choice input").click(function() {
             $("#app-choice").append(html);
         });
     });
+}
+
+function appendAppList() {
+    addDistro();
+    for (app in appList) {
+        console.log(app);
+        $("#apps").append(" " + appList[app]);
+    }
+}
+
+$(document).ready(function() {
+    var d1 = $.Deferred();
+    getapps(d1);
+
+    $.when(d1).done(function() {
+        main();
+    });
+
 });
 
-$("body").on("click", ".category input", function(){
+// assuming apps is generated
+// generates the application picker
+$("#distro-choice input").click(function() {
+    distro = this.value;
+    distroSelect();
+});
+
+$("body").on("click", ".category input", function() {
 
     appList = [];
 
@@ -150,3 +162,7 @@ $("body").on("click", ".category input", function(){
     console.log(appList);
     appendAppList();
 });
+
+$("#apps").click(function() {
+    this.select();
+})

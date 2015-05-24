@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/flexboxgrid.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <title></title>
-</head>
-<body>
-    <header>
-        <div class="row center-xs">
-            <div class="col-xs-6" id="header">
-                <h2>Linite</h2>
+    <head>
+        <meta charset="UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/flexboxgrid.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Linite</title>
+    </head>
+    <body>
+        <header>
+            <div class="row center-xs">
+                <div class="col-xs-6" id="header">
+                    <h2>Linite</h2>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <div class="row center-xs">
-            <div class="col-xs-6" id="distro-choice">
-                <label><input type="radio" value="debian" name="distro"> Debian</label><br>
-                <label><input type="radio" value="fedora" name="distro"> Fedora</label>
+        <main>
+            <div class="row center-xs" id="distro-info">
+                <div class="col-xs-12 col-sm-3" id="distro-choice">
+                    <label><input type="radio" value="ubuntu" name="distro" id="ubuntu-select"> Ubuntu</label><br>
+                    <label><input type="radio" value="debian" name="distro"> Debian</label><br>
+                    <label><input type="radio" value="arch" name="distro"> Arch Linux</label><br>
+                    <label><input type="radio" value="fedora" name="distro"> Fedora</label>
+                    <!--<p>Note: It seems that because of a security feature in chrom*, this seems to not work. Please try Firefox, if your web browser doesn't work.</p>-->
+                </div>
+                <div class="col-xs-12 col-sm-3">
+                    <ol>
+                        <li>Choose your distribution.</li>
+                        <li>Select the applications you want.</li>
+                        <li>Copy and paste the generated command into your terminal.</li>
+                    </ol>
+                </div>
             </div>
-        </div>
-        <div class="row center-xs">
-            <div class="col-xs-11" id="app-choice">
-            </div>
-        </div>
-        <div class="row center-xs">
-            <textarea id="apps" class="col-xs-11" readonly></textarea>
-        </div>
-    </main>
+            <div class="row center-xs">
+                <div class="col-xs-11">
 
-    <footer>
-        <div class="row center-xs">
-            <div class="col-xs-6">
+                    <div class="row" id="app-choice">
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
+            <div class="row center-xs">
+                <textarea id="apps" class="col-xs-11" readonly></textarea>
+            </div>
+        </main>
+
+        <footer>
+            <div class="row center-xs">
+                <div class="col-xs-6">
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

@@ -22,6 +22,11 @@ I will be working on this when my partners don't need me to work on stuff for th
     * There will be an option to save the script.
     * Could also put a "yes" check box to add, for example "-y" to apt-get.
 
+## Bugs
+
+* Due to a security feature in chromium / google chrome, this doesn't work.
+* Firefox gives a warning saying the json is "not well-formed", when it seems correct.
+
 ## Possible future features
 
 * PPA support

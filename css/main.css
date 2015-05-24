@@ -31,6 +31,12 @@ footer {
   margin-bottom: 20px;
   padding: 10px; }
 
+#distro-info {
+  margin: 60px 0;
+  text-align: left; }
+  #distro-info ol {
+    margin: 0; }
+
 #app-choice {
   border: 1px solid black;
   padding: 10px;
