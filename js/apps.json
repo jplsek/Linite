@@ -1,0 +1,57 @@
+{
+    "global": [
+        {
+            "Web Browsers": [
+                {
+                    "chromium": {
+                        "icon":"chromium.jpg",
+                        "name":"Chromium",
+                        "program":"chromium-browser"
+                    }
+                }
+            ]
+        },
+        {
+            "Programming Tools": [
+                {
+                    "python3-dev": {
+                        "icon":"python.jpg",
+                        "name":"Python 3 Development"
+                    }
+                }
+            ]
+        }
+    ],
+    "debian": [
+        {
+            "Web Browsers": [
+                {}
+            ]
+        },
+        {
+            "Programming Tools": [
+                {
+                    "python3-dev": {
+                        "program":"python3-dev"
+                    }
+                }
+            ]
+        }
+    ],
+    "fedora": [
+        {
+            "Web Browsers": [
+                {}
+            ]
+        },
+        {
+            "Programming Tools": [
+                {
+                    "python3-dev": {
+                        "program":"python3-devel"
+                    }
+                }
+            ]
+        }
+    ] 
+}

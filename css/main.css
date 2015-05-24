@@ -16,10 +16,25 @@ header {
     margin-top: 15px; }
 
 main {
-  flex: 1; }
+  flex: 1;
+  overflow: hidden; }
 
 footer {
   height: 60px;
   background: #404040; }
+
+#apps {
+  border: none;
+  background: lightgray;
+  resize: none;
+  font-family: monospace;
+  margin-bottom: 20px;
+  padding: 10px; }
+
+#app-choice {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=main.css.map */
