@@ -30,13 +30,14 @@ Stucture:
 ```javascript
 [{  // start of array of categories
     "Graphics": { // category name and start of apps array
-        "krita": { // apps "id"
+        "krita": { // app "id"
             "icon":"krita.jpg", // icon
             "name":"Krita",	    // friendly name
             "program":"krita"   // package name
         }
     }
 }]
+```
 
 ## Possible future features
 
