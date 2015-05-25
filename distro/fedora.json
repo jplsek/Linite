@@ -1,61 +1,48 @@
-[
-    {
-        "Utilities": [
-            {}
-        ]
-    },
-    {
-        "Web Browsers": [
-            {
-                "chromium": {
-                    "program":"chromium-browser"
-                }
-            }
-        ]
-    },
-    {
-        "Developer Tools": [
-            {
-                "python3-dev": {
-                    "program":"python3-devel"
-                },
-                "openjdk7-jdk": {
-                    "program":"java-1.7.0-openjdk"
-                },
-                "openjdk8-jdk": {
-                    "program":"java-1.8.0-openjdk"
-                }
-            }
-        ]
-    },
-    {
-        "Graphics": [
-            {}
-        ]
-    },
-    {
-        "Office": [
-            {}
-        ]
-    },
-    {
-        "Media": [
-            {}
-        ]
-    },
-    {
-        "Messaging": [
-            {}
-        ]
-    },
-    {
-        "Gaming": [
-            {}
-        ]
-    },
-    {
-        "Other": [
-            {}
-        ]
+[{
+    "Utilities": {
     }
-]
+},
+{
+    "Web Browsers": {
+        "chromium": {
+            "program":"chromium-browser"
+        }
+    }
+},
+{
+    "Developer Tools": {
+        "python3-dev": {
+            "program":"python3-devel"
+        },
+        "openjdk7-jdk": {
+            "program":"java-1.7.0-openjdk"
+        },
+        "openjdk8-jdk": {
+            "program":"java-1.8.0-openjdk"
+        }
+    }
+},
+{
+    "Graphics": {
+    }
+},
+{
+    "Office": {
+    }
+},
+{
+    "Media": {
+    }
+},
+{
+    "Messaging": {
+    }
+},
+{
+    "Gaming": {
+    }
+},
+{
+    "Other": {
+    }
+}]

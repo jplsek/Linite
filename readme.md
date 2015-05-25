@@ -25,6 +25,19 @@ As if current package managers aren't easy enough, this will stream line the pro
 	* Due to a security feature in chromium / google chrome, this doesn't work.
 	* Firefox gives a warning saying the json has a "syntax error", when it seems correct.
 
+
+Stucture:
+```javascript
+[{  // start of array of categories
+    "Graphics": { // category name and start of apps array
+        "krita": { // apps "id"
+            "icon":"krita.jpg", // icon
+            "name":"Krita",	    // friendly name
+            "program":"krita"   // package name
+        }
+    }
+}]
+
 ## Possible future features
 
 * PPA support

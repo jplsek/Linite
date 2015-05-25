@@ -1,47 +1,36 @@
-"distro": [
-    {
-        "Utilities": [
-            {}
-        ]
-    },
-    {
-        "Web Browsers": [
-            {}
-        ]
-    },
-    {
-        "Developer Tools": [
-            {}
-        ]
-    },
-    {
-        "Graphics": [
-            {}
-        ]
-    },
-    {
-        "Office": [
-            {}
-        ]
-    },
-    {
-        "Media": [
-            {}
-        ]
-    },
-    {
-        "Messaging": [
-            {}
-        ]
-    },
-    {
-        "Gaming": [
-            {}
-        ]
-    },
-    {
-        "Other": [
-            {}
-        ]
+"distro": {
+    "Utilities": {
     }
-] 
+},
+{
+    "Web Browsers": {
+    }
+},
+{
+    "Developer Tools": {
+    }
+},
+{
+    "Graphics": {
+    }
+},
+{
+    "Office": {
+    }
+},
+{
+    "Media": {
+    }
+},
+{
+    "Messaging": {
+    }
+},
+{
+    "Gaming": {
+    }
+},
+{
+    "Other": {
+    }
+}]
