@@ -1,0 +1,105 @@
+[
+    {
+        "Utilities": [
+            {}
+        ]
+    },
+    {
+        "Web Browsers": [
+            {
+                "chromium": {
+                    "icon":"chromium.jpg",
+                    "name":"Chromium"
+                }
+            }
+        ]
+    },
+    {
+        "Developer Tools": [
+            {
+                "python3-dev": {
+                    "icon":"python.jpg",
+                    "name":"Python 3 Development"
+                },
+                "openjdk7-jdk": {
+                    "icon":"java.jpg",
+                    "name":"OpenJDK Java 7 JDK"
+                },
+                "openjdk8-jdk": {
+                    "icon":"java.jpg",
+                    "name":"OpenJDK Java 8 JDK"
+                }
+            }
+        ]
+    },
+    {
+        "Graphics": [
+            {
+                "gimp": {
+                    "icon":"gimp.jpg",
+                    "name":"GIMP",
+                    "program":"gimp"
+                },
+                "inkscape": {
+                    "icon":"inkscape.jpg",
+                    "name":"Inkscape",
+                    "program":"inkscape"
+                },
+                "krita": {
+                    "icon":"krita.jpg",
+                    "name":"Krita",
+                    "program":"krita"
+                }
+            }
+        ]
+    },
+    {
+        "Office": [
+            {
+                "libreoffice": {
+                    "icon":"libreoffice.jpg",
+                    "name":"LibreOffice",
+                    "program":"libreoffice"
+                }
+            }
+        ]
+    },
+    {
+        "Media": [
+            {
+                "vlc": {
+                    "icon":"vlc.jpg",
+                    "name":"VLC",
+                    "program":"vlc"
+                },
+                "audacity": {
+                    "icon":"audacity.jpg",
+                    "name":"Audacity",
+                    "program":"audacity"
+                }
+            }
+        ]
+    },
+    {
+        "Messaging": [
+
+            {
+                "thunderbird": {
+                    "icon":"thunderbird.jpg",
+                    "name":"Thunderbird",
+                    "program":"thunderbird"
+                }
+            }
+        ]
+    },
+    {
+        "Gaming": [
+            {}
+        ]
+    },
+    {
+        "Other": [
+            {}
+        ]
+    }
+]
