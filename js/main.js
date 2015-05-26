@@ -31,9 +31,39 @@ function getapps(d1, distro) {
 // set up package manager here.
 function addDistro(distro) {
 
-    var option = "";
+    var optionAppend = "";
+    var optionPrepend = "";
+
+    // show update input in case it was hidden by the fedora option
+    $("input[name='update']").parent().show();
 
     $("#apps").empty();
+
+    if ($("input[name='update']").is(':checked')) {
+
+        switch(distro) {
+
+            case "ubuntu":
+            case "debian":
+                optionPrepend += "sudo apt-get update && ";
+                break;
+
+            case "fedora":
+                $("input[name='update']").parent().hide();
+                break;
+
+            case "arch":
+                optionAppend += "y";
+                break;
+
+            case "global":
+                break;
+
+            default:
+                console.log("Distro: " + distro + " not supported, please implement if possible.");
+                break;
+        }
+    }
 
     if ($("input[name='yes']").is(':checked')) {
 
@@ -41,11 +71,11 @@ function addDistro(distro) {
             case "ubuntu":
             case "debian":
             case "fedora":
-                option += " -y";
+                optionAppend += " -y";
                 break;
 
             case "arch":
-                option += " --noconfirm";
+                optionAppend += " --noconfirm";
                 break;
 
             case "global":
@@ -58,17 +88,18 @@ function addDistro(distro) {
     }
 
     switch(distro) {
+
         case "ubuntu":
         case "debian":
-            $("#apps").append("sudo apt-get install" + option);
+            $("#apps").append(optionPrepend + "sudo apt-get install" + optionAppend);
             break;
 
         case "fedora":
-            $("#apps").append("sudo yum install" + option);
+            $("#apps").append(optionPrepend + "sudo yum install" + optionAppend);
             break;
 
         case "arch":
-            $("#apps").append("sudo pacman -S" + option);
+            $("#apps").append(optionPrepend + "sudo pacman -S" + optionAppend);
             break;
 
         case "global":
@@ -126,6 +157,7 @@ function distroSelect(distro) {
                             case "icon":
                                 appIcon = value;
                                 break;
+
                             case "program":
                                 appProg = value;
                                 break;
@@ -199,7 +231,11 @@ $("body").on("click", ".category input", function() {
 
 $("body").on("click", "input[name='yes']", function() {
     updateAppArea();
-})
+});
+
+$("body").on("click", "input[name='update']", function() {
+    updateAppArea();
+});
 
 // highlights the textarea
 $("#apps").click(function() {
