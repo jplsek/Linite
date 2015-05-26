@@ -4,20 +4,20 @@
 },
 {
     "Web Browsers": {
-        "chromium": {
+        "Chromium": {
             "program":"chromium-browser"
         }
     }
 },
 {
     "Developer Tools": {
-        "python3-dev": {
+        "Python 3 Development": {
             "program":"python3-devel"
         },
-        "openjdk7-jdk": {
+        "OpenJDK Java 7 JDK": {
             "program":"java-1.7.0-openjdk"
         },
-        "openjdk8-jdk": {
+        "OpenJDK Java 8 JDK": {
             "program":"java-1.8.0-openjdk"
         }
     }

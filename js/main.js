@@ -30,17 +30,54 @@ function getapps(d1, distro) {
 
 // set up package manager here.
 function addDistro(distro) {
+
+    var option = "";
+
     $("#apps").empty();
-    if (distro == "ubuntu" || distro == "debian")
-        $("#apps").append("sudo apt-get install");
-    else if (distro == "arch")
-        $("#apps").append("sudo pacman -S");
-    else if (distro == "fedora")
-        $("#apps").append("sudo yum install");
-    else if (distro == "global")
-        console.log("global selected");
-    else
-        console.log("Distro: " + distro + " not supported, please implement.");
+
+    if ($("input[name='yes']").is(':checked')) {
+
+        switch(distro) {
+            case "ubuntu":
+            case "debian":
+            case "fedora":
+                option += " -y";
+                break;
+
+            case "arch":
+                option += " --noconfirm";
+                break;
+
+            case "global":
+                break;
+
+            default:
+                console.log("Distro: " + distro + " not supported, please implement if possible.");
+                break;
+        }
+    }
+
+    switch(distro) {
+        case "ubuntu":
+        case "debian":
+            $("#apps").append("sudo apt-get install" + option);
+            break;
+
+        case "fedora":
+            $("#apps").append("sudo yum install" + option);
+            break;
+
+        case "arch":
+            $("#apps").append("sudo pacman -S" + option);
+            break;
+
+        case "global":
+            break;
+
+        default:
+            console.log("Distro: " + distro + " not supported, please implement.");
+            break;
+    }
 }
 
 // generates the category list, apps referes to a json
@@ -73,23 +110,19 @@ function distroSelect(distro) {
         // 0. selects 1st array
         $.each(types, function (array, category) {
             // 1. selects category
-            $.each(category, function (categoryName, subObject) {
+            $.each(category, function (categoryName, application) {
                 //console.log(categoryName);
                 html = "<div class=\"category col-xs-12 col-sm-3 col-lg-2\"><h4>" + categoryName + "</h4>";
                 // 2. selects app
-                $.each(subObject, function (uniqueName, subObject) {
-                    //console.log("2: " + uniqueName + "=" + subObject);
-                    var appName = null;
+                $.each(application, function (appName, applicationDetails) {
+                    //console.log("2: " + appName + "=" + subObject);
                     var appIcon = null;
                     var appProg = null;
                     // 3. selects app values
-                    $.each(subObject, function (name, value) {
+                    $.each(applicationDetails, function (name, value) {
                         //console.log("3: " + name + "=" + value);
 
                         switch(name) {
-                            case "name":
-                                appName = value;
-                                break;
                             case "icon":
                                 appImg = value;
                                 break;
@@ -100,7 +133,7 @@ function distroSelect(distro) {
                     });
 
                     html += "<label><input type=\"checkbox\" name=\"appProg\" value=\"" + appProg + "\"> ";
-                    html += "<img src=\"img/" + appImg + "\" alt=\"\">";
+                    html += "<img src=\"img/" + appImg + "\" alt=\"\" onerror='this.style.display = \"none\"'>";
                     html += "<span>" + appName + "</span></label><br>";
                 });
 
@@ -118,6 +151,22 @@ function appendAppList(appList) {
         //console.log(app);
         $("#apps").append(" " + appList[app]);
     }
+}
+
+function updateAppArea() {
+
+    var appList = [];
+
+    $("input[name='appProg']").each(function() {
+
+        if ($(this).is(":checked")) {
+            //console.log(this.value);
+            appList.push(this.value);
+        }
+    });
+
+    //console.log(appList);
+    appendAppList(appList);
 }
 
 $(document).ready(function() {
@@ -145,27 +194,14 @@ $("#distro-choice input").click(function() {
 
 // adds the app to the textarea
 $("body").on("click", ".category input", function() {
-
-    var appList = [];
-
-    $("input[name='appProg']").each(function() {
-
-        if ($(this).is(":checked")) {
-            //console.log(this.value);
-            appList.push(this.value);
-        }
-    });
-
-    //console.log(appList);
-    appendAppList(appList);
+    updateAppArea();
 });
+
+$("body").on("click", "input[name='yes']", function() {
+    updateAppArea();
+})
 
 // highlights the textarea
 $("#apps").click(function() {
     this.select();
 })
-
-// hides the error icon in chrom* when there is no image
-$("img").error(function () { 
-    $(this).hide();
-});

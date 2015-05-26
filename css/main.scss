@@ -18,12 +18,18 @@ h1,h2,h3 {
 
 header {
     background: $blue-bg;
-    height: 60px;
+    padding-top:15px;
+    height: 45px;
     color: white;
     overflow: hidden;
     
     h2 {
-        margin-top: 15px;
+        margin-top: 0;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
     }
 }
 
@@ -43,7 +49,6 @@ footer {
     resize: none;
     font-family: monospace;
     margin-bottom: 20px;
-    padding: 10px;
 }
 
 #distro-info {
@@ -58,4 +63,12 @@ footer {
 #app-choice {
     text-align:left;
     margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }

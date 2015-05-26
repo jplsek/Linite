@@ -30,9 +30,8 @@ Stucture:
 ```javascript
 [{  // start of array of categories
     "Graphics": { // category name and start of apps array
-        "krita": { // app "id"
+        "Krita": { // app friendly name
             "icon":"krita.jpg", // icon
-            "name":"Krita",	    // friendly name
             "program":"krita"   // package name
         }
     }
@@ -41,11 +40,12 @@ Stucture:
 
 ## Possible future features
 
+* Remember selected items between distro selection
 * PPA support
 * Generate sources.list's
 * AUR support
 * The fedora third party one
-* Detect distribution to auto select initial options (the default would be Ubuntu because of larger market share / targeted audience)
+* Detect distribution to auto select initial options (the default would still be Ubuntu because of larger market share)
 
 ## Other
 
