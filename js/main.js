@@ -124,7 +124,7 @@ function distroSelect(distro) {
 
                         switch(name) {
                             case "icon":
-                                appImg = value;
+                                appIcon = value;
                                 break;
                             case "program":
                                 appProg = value;
@@ -133,7 +133,7 @@ function distroSelect(distro) {
                     });
 
                     html += "<label><input type=\"checkbox\" name=\"appProg\" value=\"" + appProg + "\"> ";
-                    html += "<img src=\"img/" + appImg + "\" alt=\"\" onerror='this.style.display = \"none\"'>";
+                    html += "<img src=\"img/" + appIcon + "\" alt=\"\" onerror='this.style.display = \"none\"'>";
                     html += "<span>" + appName + "</span></label><br>";
                 });
 
