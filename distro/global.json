@@ -92,6 +92,10 @@
 },
 {
     "Gaming": {
+        "Steam": {
+            "icon":"steam.jpg",
+            "program":"steam"
+        }
     }
 },
 {
