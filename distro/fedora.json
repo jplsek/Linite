@@ -6,6 +6,10 @@
     "Web Browsers": {
         "Chromium": {
             "program":"chromium-browser"
+        },
+        "Firefox": {
+            "icon":"firefox.png",
+            "program":"firefox"
         }
     }
 },
@@ -40,6 +44,11 @@
 },
 {
     "Gaming": {
+        "Steam": {
+            "icon":"steam.jpg",
+            "program":"steam",
+            "warning":"RPM Fusion repositories need to be configured."
+        }
     }
 },
 {

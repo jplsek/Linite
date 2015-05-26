@@ -133,9 +133,11 @@ function distroSelect(distro) {
 
             var categoryGlobal = global[i]; 
             var categoryDistro = apps[i];
-            types.push($.extend(true, categoryGlobal, categoryDistro));
+            // note: categoryDistro ALSO becomes extended
+            types.push($.extend(true, categoryDistro, categoryGlobal));
         }
 
+        //console.log(global); 
         //console.log(types); 
 
         // 0. selects 1st array
@@ -149,6 +151,7 @@ function distroSelect(distro) {
                     //console.log("2: " + appName + "=" + subObject);
                     var appIcon = null;
                     var appProg = null;
+                    var appWarn = null;
                     // 3. selects app values
                     $.each(applicationDetails, function (name, value) {
                         //console.log("3: " + name + "=" + value);
@@ -161,12 +164,23 @@ function distroSelect(distro) {
                             case "program":
                                 appProg = value;
                                 break;
+
+                            case "warning":
+                                appWarn = value;
+                                break;
                         }
                     });
 
-                    html += "<label><input type=\"checkbox\" name=\"appProg\" value=\"" + appProg + "\"> ";
+                    html += "<div class=\"row\"><label class=\"col-xs-12\">";
+                    html += "<input type=\"checkbox\" name=\"appProg\" value=\"" + appProg + "\"> ";
                     html += "<img src=\"img/" + appIcon + "\" alt=\"\" onerror='this.style.display = \"none\"'>";
-                    html += "<span>" + appName + "</span></label><br>";
+                    html += "<span>" + appName + "</span>";
+
+                    if (appWarn != null) {
+                        html += " <span class=\"badge orange-bg\" title=\"" + appWarn + "\">!</span>";
+                    }
+
+                    html += "</label></div>";
                 });
 
                 html += "</div>";

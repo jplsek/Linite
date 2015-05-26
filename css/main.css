@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
@@ -38,19 +38,38 @@ footer {
   margin: 30px 0;
   text-align: left; }
   #distro-info ol {
-    margin: 0; }
+    margin: 0;
+    padding-left: 1rem; }
 
 #app-choice {
   text-align: left;
   margin-bottom: 20px; }
 
-#options label {
-  margin-right: 20px; }
+label {
+  padding: 0 5px;
+  cursor: pointer; }
+
+label:hover {
+  background: #BFFFBF; }
+
+#options {
+  margin-right: 0.5rem; }
+  #options label {
+    margin-right: 20px; }
 
 .text-center {
   text-align: center; }
 
 .text-left {
   text-align: left; }
+
+.badge {
+  border-radius: 50%;
+  font-size: 0.8em;
+  padding: 0 8px; }
+
+.orange-bg {
+  background: #FF5722;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,19 @@
 [{
     "Utilities": {
+        "Owncloud Client": {
+            "icon":"owncloud.jpg",
+            "program":"owncloud-client"
+        }
     }
 },
 {
     "Web Browsers": {
         "Chromium": {
             "program":"chromium"
+        },
+        "Firefox": {
+            "icon":"firefox.png",
+            "program":"firefox"
         }
     }
 },
@@ -40,6 +48,10 @@
 },
 {
     "Gaming": {
+        "Steam": {
+            "icon":"steam.jpg",
+            "program":"steam"
+        }
     }
 },
 {
