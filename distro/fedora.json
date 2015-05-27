@@ -1,5 +1,26 @@
 [{
     "Utilities": {
+        "OpenJDK Java 7 JRE": {
+            "program":"java-1.7.0-openjdk"
+        },
+        "OpenJDK Java 8 JRE": {
+            "program":"java-1.8.0-openjdk"
+        }
+    }
+},
+{
+    "Editors": {
+        "Vim": {
+            "icon":"vim.jpg",
+            "program":"vim"
+        },
+        "Eclipse": {
+            "icon":"eclipse.jpg",
+            "program":"eclipse"
+        },
+        "QTCreator": {
+            "program":"qt-creator"
+        }
     }
 },
 {
@@ -32,6 +53,9 @@
 },
 {
     "Office": {
+        "OpenOffice": {
+            "program":"openoffice.org"
+        }
     }
 },
 {
