@@ -3,6 +3,27 @@
         "Owncloud Client": {
             "icon":"owncloud.jpg",
             "program":"owncloud-client"
+        },
+        "OpenJDK Java 7 JRE": {
+            "program":"openjdk-7-jdk"
+        },
+        "OpenJDK Java 8 JRE": {
+            "program":"openjdk-8-jdk"
+        }
+    }
+},
+{
+    "Editors": {
+        "Vim": {
+            "icon":"vim.jpg",
+            "program":"vim"
+        },
+        "Eclipse": {
+            "icon":"eclipse.jpg",
+            "program":"eclipse"
+        },
+        "QTCreator": {
+            "program":"qtcreator"
         }
     }
 },
@@ -36,6 +57,9 @@
 },
 {
     "Office": {
+        "OpenOffice": {
+            "program":"openoffice.org"
+        }
     }
 },
 {
@@ -52,5 +76,9 @@
 },
 {
     "Other": {
+        "PlayOnLinux": {
+            "icon":"playonlinux.png",
+            "program":"playonlinux"
+        }
     }
 }]

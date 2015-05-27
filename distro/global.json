@@ -1,5 +1,30 @@
 [{
     "Utilities": {
+        "OpenJDK Java 7 JRE": {
+            "icon":"java.jpg"
+        },
+        "OpenJDK Java 8 JRE": {
+            "icon":"java.jpg"
+        }
+    }
+},
+{
+    "Editors": {
+        "Vim": {
+            "icon":"vim.jpg",
+            "program":"vim"
+        },
+        "Eclipse": {
+            "icon":"eclipse.jpg",
+            "program":"eclipse"
+        },
+        "QTCreator": {
+            "icon":"qtcreator.jpg"
+        },
+        "Geany": {
+            "icon":"geany.jpg",
+            "program":"geany"
+        }
     }
 },
 {
@@ -11,14 +36,6 @@
 },
 {
     "Developer Tools": {
-        "Vim": {
-            "icon":"vim.jpg",
-            "program":"vim"
-        },
-        "Eclipse": {
-            "icon":"eclipse.jpg",
-            "program":"eclipse"
-        },
         "Python 3 Development": {
             "icon":"python.jpg"
         },
@@ -27,6 +44,26 @@
         },
         "OpenJDK Java 8 JDK": {
             "icon":"java.jpg"
+        },
+        "gcc": {
+            "icon":"gcc.jpg",
+            "program":"gcc"
+        },
+        "cmake": {
+            "icon":"cmake.jpg",
+            "program":"cmake"
+        },
+        "Git": {
+            "icon":"git.jpg",
+            "program":"git"
+        },
+        "Svn": {
+            "icon":"svn.jpg",
+            "program":"svn"
+        },
+        "Mercurial": {
+            "icon":"mercurial.jpg",
+            "program":"mercurial"
         }
     }
 },
@@ -55,6 +92,9 @@
         "LibreOffice": {
             "icon":"libreoffice.jpg",
             "program":"libreoffice"
+        },
+        "OpenOffice": {
+            "icon":"openoffice.jpg"
         }
     }
 },
@@ -103,6 +143,14 @@
         "Conky": {
             "icon":"conky.jpg",
             "program":"conky"
+        },
+        "Wine": {
+            "icon":"wine.jpg",
+            "program":"wine"
+        },
+        "Wine": {
+            "icon":"wine.jpg",
+            "program":"wine"
         }
     }
 }]
