@@ -9,6 +9,10 @@
         },
         "OpenJDK Java 8 JRE": {
             "program":"openjdk-8-jdk"
+        },
+        "Synaptic": {
+            "icon": "synaptic.jpg",
+            "program": "synaptic"
         }
     }
 },
@@ -64,6 +68,10 @@
 },
 {
     "Media": {
+        "Kodi": {
+            "icon": "kodi.jpg",
+            "program": "xbmc"
+        }
     }
 },
 {
@@ -79,6 +87,11 @@
         "PlayOnLinux": {
             "icon":"playonlinux.png",
             "program":"playonlinux"
+        },
+        "Virtualbox": {
+            "icon":"virtualbox.png",
+            "program":"virtualbox"
         }
+        
     }
 }]

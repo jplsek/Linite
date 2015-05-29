@@ -5,6 +5,18 @@
         },
         "OpenJDK Java 8 JRE": {
             "icon":"java.jpg"
+        },
+        "Deluge": {
+            "icon":"deluge.jpg",
+            "program":"deluge"
+        },
+        "Guake": {
+            "icon":"guake.jpg",
+            "program":"guake"
+        },
+        "Shutter": {
+            "icon":"shutter.jpg",
+            "program":"shutter"
         }
     }
 },
@@ -24,6 +36,10 @@
         "Geany": {
             "icon":"geany.jpg",
             "program":"geany"
+        },
+        "Emacs": {
+            "icon":"emacs.jpg",
+            "program":"emacs"
         }
     }
 },
@@ -148,9 +164,9 @@
             "icon":"wine.jpg",
             "program":"wine"
         },
-        "Wine": {
-            "icon":"wine.jpg",
-            "program":"wine"
+        "Zsh": {
+            "icon":"zsh.jpg",
+            "program":"zsh"
         }
     }
 }]
