@@ -57,6 +57,9 @@ label:hover {
   #options label {
     margin-right: 20px; }
 
+.category {
+  white-space: nowrap; }
+
 .text-center {
   text-align: center; }
 

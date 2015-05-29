@@ -64,6 +64,10 @@
 },
 {
     "Media": {
+        "Kodi": {
+            "icon": "kodi.jpg",
+            "program": "kodi"
+        }
     }
 },
 {
@@ -79,6 +83,10 @@
         "PlayOnLinux": {
             "icon":"playonlinux.png",
             "program":"playonlinux"
+        },
+        "Virtualbox": {
+            "icon":"virtualbox.png",
+            "program":"virtualbox"
         }
     }
 }]
