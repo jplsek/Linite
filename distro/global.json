@@ -47,6 +47,10 @@
     "Web Browsers": {
         "Chromium": {
             "icon":"chromium.jpg"
+        },
+        "Midori": {
+            "icon":"midori.jpg",
+            "program":"midori"
         }
     }
 },

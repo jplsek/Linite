@@ -1,7 +1,7 @@
 Linite
 ======
 
-You can view it here: [http://jplsek.github.io/Linite/](http://jplsek.github.io/Linite/)
+You can view it here: [http://jplsek.github.io/Linite/](https://jplsek.github.io/Linite/)
 
 This is meant to be similar to the free version of [Ninite](https://ninite.com/), except to create just a simple script to run.
 As if current package managers aren't easy enough, this will stream line the process even more (specifically for those distro-hoppers ;) ).

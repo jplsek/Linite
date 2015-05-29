@@ -27,6 +27,20 @@ footer {
   height: 60px;
   background: #404040; }
 
+a {
+  text-decoration: none;
+  color: #03A9F4; }
+
+a:hover {
+  text-decoration: underline; }
+
+label {
+  padding: 0 5px;
+  cursor: pointer; }
+
+label:hover {
+  background: #BFFFBF; }
+
 #apps {
   border: none;
   background: lightgray;
@@ -35,7 +49,7 @@ footer {
   margin-bottom: 20px; }
 
 #distro-info {
-  margin: 30px 0;
+  margin: 0 0 30px;
   text-align: left; }
   #distro-info ol {
     margin: 0;
@@ -44,13 +58,6 @@ footer {
 #app-choice {
   text-align: left;
   margin-bottom: 20px; }
-
-label {
-  padding: 0 5px;
-  cursor: pointer; }
-
-label:hover {
-  background: #BFFFBF; }
 
 #options {
   margin-right: 0.5rem; }
