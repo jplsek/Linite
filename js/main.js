@@ -197,6 +197,8 @@ function appendAppList(appList) {
         //console.log(app);
         $("#apps").append(" " + appList[app]);
     }
+
+    growTextarea("#apps");
 }
 
 function updateAppArea() {
@@ -213,6 +215,13 @@ function updateAppArea() {
 
     //console.log(appList);
     appendAppList(appList);
+}
+
+// autogrow the textarea (adapted from http://stackoverflow.com/a/10080841)
+function growTextarea(element) {
+    while($(element).outerHeight() < $(element)[0].scrollHeight + parseFloat($(element).css("borderTopWidth")) + parseFloat($(element).css("borderBottomWidth"))) {
+        $(element).height($(element).height()+1);
+    };
 }
 
 $(document).ready(function() {
@@ -254,4 +263,5 @@ $("body").on("click", "input[name='update']", function() {
 // highlights the textarea
 $("#apps").click(function() {
     this.select();
-})
+});
+
