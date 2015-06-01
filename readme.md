@@ -53,7 +53,6 @@ Stucture:
 * PPA support
 * Generate sources.list's
 * AUR support
-* Detect distribution to auto select initial options (the default would still be Ubuntu because of larger market share)
 
 ## Other
 
