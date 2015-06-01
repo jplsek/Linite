@@ -8,15 +8,19 @@
         },
         "Deluge": {
             "icon":"deluge.jpg",
-            "program":"deluge"
+            "program":"deluge",
+            "url":"http://deluge-torrent.org/"
         },
         "Guake": {
             "icon":"guake.jpg",
-            "program":"guake"
+            "program":"guake",
+            "url":"http://guake-project.org/"
         },
         "Shutter": {
             "icon":"shutter.jpg",
-            "program":"shutter"
+            "program":"shutter",
+            "description":"Feature-rich screenshot program.",
+            "url":"http://shutter-project.org/"
         }
     }
 },
@@ -24,22 +28,27 @@
     "Editors": {
         "Vim": {
             "icon":"vim.jpg",
-            "program":"vim"
+            "program":"vim",
+            "url":"http://www.vim.org/"
         },
         "Eclipse": {
             "icon":"eclipse.jpg",
-            "program":"eclipse"
+            "program":"eclipse",
+            "url":"https://eclipse.org/"
         },
         "QTCreator": {
-            "icon":"qtcreator.jpg"
+            "icon":"qtcreator.jpg",
+            "url":"https://www.qt.io/"
         },
         "Geany": {
             "icon":"geany.jpg",
-            "program":"geany"
+            "program":"geany",
+            "url":"http://www.geany.org/"
         },
         "Emacs": {
             "icon":"emacs.jpg",
-            "program":"emacs"
+            "program":"emacs",
+            "url":"https://www.gnu.org/software/emacs/"
         }
     }
 },
@@ -50,7 +59,8 @@
         },
         "Midori": {
             "icon":"midori.jpg",
-            "program":"midori"
+            "program":"midori",
+            "url":"http://midori-browser.org/"
         }
     }
 },
@@ -75,15 +85,18 @@
         },
         "Git": {
             "icon":"git.jpg",
-            "program":"git"
+            "program":"git",
+            "url":"https://git-scm.com/"
         },
         "Svn": {
             "icon":"svn.jpg",
-            "program":"svn"
+            "program":"svn",
+            "url":"https://subversion.apache.org/"
         },
         "Mercurial": {
             "icon":"mercurial.jpg",
-            "program":"mercurial"
+            "program":"mercurial",
+            "url":"https://mercurial.selenic.com/"
         }
     }
 },
@@ -91,19 +104,27 @@
     "Graphics": {
         "GIMP": {
             "icon":"gimp.jpg",
-            "program":"gimp"
+            "program":"gimp",
+            "description":"Photo retouching, image composition and image authoring.",
+            "url":"http://www.gimp.org/"
         },
         "Inkscape": {
             "icon":"inkscape.jpg",
-            "program":"inkscape"
+            "program":"inkscape",
+            "description":"Vector graphics editor.",
+            "url":"https://inkscape.org/en/"
         },
         "Krita": {
             "icon":"krita.jpg",
-            "program":"krita"
+            "program":"krita",
+            "description":"Digital painting and illustration.",
+            "url":"https://krita.org/"
         },
         "Blender": {
             "icon":"blender.jpg",
-            "program":"blender"
+            "program":"blender",
+            "description":"3D model and animation editor.",
+            "url":"https://www.blender.org/"
         }
     }
 },
@@ -111,10 +132,12 @@
     "Office": {
         "LibreOffice": {
             "icon":"libreoffice.jpg",
-            "program":"libreoffice"
+            "program":"libreoffice",
+            "url":"https://www.libreoffice.org/"
         },
         "OpenOffice": {
-            "icon":"openoffice.jpg"
+            "icon":"openoffice.jpg",
+            "url":"https://www.openoffice.org/"
         }
     }
 },
@@ -122,15 +145,19 @@
     "Media": {
         "VLC": {
             "icon":"vlc.jpg",
-            "program":"vlc"
+            "program":"vlc",
+            "url":"https://www.videolan.org/vlc/index.html"
         },
         "Audacity": {
             "icon":"audacity.jpg",
-            "program":"audacity"
+            "program":"audacity",
+            "description":"Record and edit sounds.",
+            "url":"http://web.audacityteam.org/"
         },
         "Clementine": {
             "icon":"clementine.jpg",
-            "program":"clementine"
+            "program":"clementine",
+            "url":"https://www.clementine-player.org/"
         },
         "Rhythmbox": {
             "icon":"rhythmbox.jpg",
@@ -142,11 +169,14 @@
     "Messaging": {
         "Thunderbird": {
             "icon":"thunderbird.jpg",
-            "program":"thunderbird"
+            "program":"thunderbird",
+            "url":"https://www.mozilla.org/en-US/thunderbird/"
         },
         "Hexchat": {
             "icon":"hexchat.jpg",
-            "program":"hexchat"
+            "program":"hexchat",
+            "description":"IRC client based on XChat.",
+            "url":"https://hexchat.github.io/"
         }
     }
 },
@@ -154,7 +184,8 @@
     "Gaming": {
         "Steam": {
             "icon":"steam.jpg",
-            "program":"steam"
+            "program":"steam",
+            "url":"http://store.steampowered.com/"
         }
     }
 },
@@ -162,15 +193,20 @@
     "Other": {
         "Conky": {
             "icon":"conky.jpg",
-            "program":"conky"
+            "program":"conky",
+            "description":"Light-weight system monitor for X.",
+            "url":"http://conky.sourceforge.net/"
         },
         "Wine": {
             "icon":"wine.jpg",
-            "program":"wine"
+            "program":"wine",
+            "description":"A compatibility layer capable of running Windows applications.",
+            "url":"https://www.winehq.org/"
         },
         "Zsh": {
             "icon":"zsh.jpg",
-            "program":"zsh"
+            "program":"zsh",
+            "url":"http://zsh.sourceforge.net/"
         }
     }
 }]

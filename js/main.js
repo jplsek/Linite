@@ -39,13 +39,17 @@ function addDistro(distro) {
 
     $("#apps").empty();
 
+    if ($("input[name='sudo']").is(':checked')) {
+        optionPrepend += "sudo ";
+    }
+
     if ($("input[name='update']").is(':checked')) {
 
         switch(distro) {
 
             case "ubuntu":
             case "debian":
-                optionPrepend += "sudo apt-get update && ";
+                optionPrepend += "apt-get update && ";
                 break;
 
             case "fedora":
@@ -91,15 +95,18 @@ function addDistro(distro) {
 
         case "ubuntu":
         case "debian":
-            $("#apps").append(optionPrepend + "sudo apt-get install" + optionAppend);
+            if ($("input[name='update']").is(':checked') && $("input[name='sudo']").is(':checked'))
+                $("#apps").append(optionPrepend + "sudo apt-get install" + optionAppend);
+            else
+                $("#apps").append(optionPrepend + "apt-get install" + optionAppend);
             break;
 
         case "fedora":
-            $("#apps").append(optionPrepend + "sudo yum install" + optionAppend);
+            $("#apps").append(optionPrepend + "yum install" + optionAppend);
             break;
 
         case "arch":
-            $("#apps").append(optionPrepend + "sudo pacman -S" + optionAppend);
+            $("#apps").append(optionPrepend + "pacman -S" + optionAppend);
             break;
 
         case "global":
@@ -152,6 +159,7 @@ function distroSelect(distro) {
                     var appIcon = null;
                     var appProg = null;
                     var appWarn = null;
+                    var appDesc = null;
                     // 3. selects app values
                     $.each(applicationDetails, function (name, value) {
                         //console.log("3: " + name + "=" + value);
@@ -168,17 +176,29 @@ function distroSelect(distro) {
                             case "warning":
                                 appWarn = value;
                                 break;
+
+                            case "description":
+                                appDesc = value;
+                                break;
                         }
                     });
 
-                    html += "<div class=\"row\"><label class=\"col-xs-12\">";
+                    html += "<div class=\"row\">";
+
+                    if (appDesc != null)
+                        html += "<label class=\"col-xs-12 tooltip\" title=\"" + appDesc + "\">";
+                    else
+                        html += "<label class=\"col-xs-12\">";
+
                     html += "<input type=\"checkbox\" name=\"appProg\" value=\"" + appProg + "\"> ";
-                    html += "<img src=\"img/" + appIcon + "\" alt=\"\" onerror='this.style.display = \"none\"'>";
+
+                    if (appIcon != null)
+                        html += "<img src=\"img/" + appIcon + "\" alt=\"\" onerror='this.style.display = \"none\"'>";
+
                     html += "<span>" + appName + "</span>";
 
-                    if (appWarn != null) {
+                    if (appWarn != null)
                         html += " <span class=\"badge orange-bg\" title=\"" + appWarn + "\">!</span>";
-                    }
 
                     html += "</label></div>";
                 });
@@ -187,6 +207,7 @@ function distroSelect(distro) {
                 $("#app-choice").append(html);
             });
         });
+        $('.tooltip').tooltipster();
     });
 }
 
@@ -226,9 +247,6 @@ function growTextarea(element) {
 
 $(document).ready(function() {
 
-    // select ubuntu radio in case it's cached, may change later
-    $("#ubuntu-select").prop("checked", true); 
-
     // generate the global first
     var d = $.Deferred();
     getapps(d, "global");
@@ -237,7 +255,9 @@ $(document).ready(function() {
         
         console.log("done getting global");
         global = globalapps;
-        distroSelect("ubuntu");
+        
+        var distro = $("#distro-choice input:checked")[0].value;
+        distroSelect(distro);
     });
 
 });
@@ -252,11 +272,7 @@ $("body").on("click", ".category input", function() {
     updateAppArea();
 });
 
-$("body").on("click", "input[name='yes']", function() {
-    updateAppArea();
-});
-
-$("body").on("click", "input[name='update']", function() {
+$("body").on("click", "#options input", function() {
     updateAppArea();
 });
 

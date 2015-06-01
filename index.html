@@ -5,6 +5,7 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/flexboxgrid.min.css">
+        <link rel="stylesheet" type="text/css" href="css/tooltipster.css">
         <link rel="stylesheet" href="css/main.css">
         <title>Linite</title>
         <meta property="og:title" content="Linite">
@@ -31,7 +32,7 @@
                     <div class="row" id="distro-info">
                         <div class="col-xs-12 col-sm-offset-3 col-sm-3" id="distro-choice">
                             <div class="row">
-                                <label class="col-xs-12"><input type="radio" value="ubuntu" name="distro" id="ubuntu-select"> Ubuntu</label><br>
+                                <label class="col-xs-12"><input type="radio" value="ubuntu" name="distro" checked> Ubuntu</label><br>
                             </div>
                             <div class="row">
                                 <label class="col-xs-12"><input type="radio" value="debian" name="distro"> Debian</label><br>
@@ -55,6 +56,7 @@
                     </div>
                     <div class="row center-xs">
                         <div class="col-xs-12 text-left" id="options">
+                            <label><input type="checkbox" name="sudo" checked> Sudo?</label>
                             <label><input type="checkbox" name="update"> Update Repositories?</label>
                             <label title="Assumes yes, will skip confirm message."><input type="checkbox" name="yes"> Auto?</label>
                         </div>
@@ -71,6 +73,7 @@
             </div>
         </footer>
         <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery.tooltipster.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

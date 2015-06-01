@@ -29,22 +29,30 @@ As if current package managers aren't easy enough, this will stream line the pro
 Stucture:
 ```javascript
 [{  // start of array of categories
-    "Graphics": { // category name and start of apps array
+    "Graphics": {  // category name and start of apps array
         "Krita": { // app friendly name
-            "icon":"krita.jpg", // icon
-            "program":"krita"   // package name
+            "program":"krita",  // package name
+            "icon":"krita.jpg", // icon (optional)
+            "description":"Digital painting and illustration.", // description (optional)
+            "url":"https://krita.org/" // url of their website (optional) (not used yet)
         }
     }
-}]
+}
 ```
+
+## Todo
+* Add app icons
+* Add descriptions for apps
+* Add urls for apps
+* Other distros (gentoo? opensuse?)
+* More apps / reduce apps (build-essential for debian based, add gcc-c++ for g++ on fedora)
+* Remember selected items between distro selection switching
 
 ## Possible future features
 
-* Remember selected items between distro selection
 * PPA support
 * Generate sources.list's
 * AUR support
-* The fedora third party one
 * Detect distribution to auto select initial options (the default would still be Ubuntu because of larger market share)
 
 ## Other
