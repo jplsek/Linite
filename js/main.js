@@ -1,11 +1,14 @@
 // Main js file.
 
-// global app information
+// supported distros (so far) (these names are refered to their respective json files)
+var distros = {"Ubuntu":"ubuntu", "Debian":"debian", "Arch Linux":"arch", "Fedora":"fedora"};
+
+// global json app information
 var global = null;
 
 var selectedDistro = null;
 
-// load apps.json, with a deferred object.
+// load json, with a deferred object.
 function getapps(d1, distro) {
 
     addDistro(distro);
@@ -40,7 +43,7 @@ function addDistro(distro) {
     $("#apps").empty();
 
     // hide update input for fedora because yum updates repos automatically
-    if (distro == "fedora")
+    if (distro == distros["Fedora"])
         $("input[name='update']").parent().hide();
 
     if ($("input[name='sudo']").is(':checked'))
@@ -50,16 +53,16 @@ function addDistro(distro) {
 
         switch(distro) {
 
-            case "ubuntu":
-            case "debian":
+            case distros["Ubuntu"]:
+            case distros["Debian"]:
                 optionPrepend += "apt-get update && ";
                 break;
 
-            case "arch":
+            case distros["Arch Linux"]:
                 optionAppend += "y";
                 break;
 
-            case "fedora":
+            case distros["Fedora"]:
             case "global":
                 break;
 
@@ -72,13 +75,13 @@ function addDistro(distro) {
     if ($("input[name='yes']").is(':checked')) {
 
         switch(distro) {
-            case "ubuntu":
-            case "debian":
-            case "fedora":
+            case distros["Ubuntu"]:
+            case distros["Debian"]:
+            case distros["Fedora"]:
                 optionAppend += " -y";
                 break;
 
-            case "arch":
+            case distros["Arch Linux"]:
                 optionAppend += " --noconfirm";
                 break;
 
@@ -93,19 +96,19 @@ function addDistro(distro) {
 
     switch(distro) {
 
-        case "ubuntu":
-        case "debian":
+        case distros["Ubuntu"]:
+        case distros["Debian"]:
             if ($("input[name='update']").is(':checked') && $("input[name='sudo']").is(':checked'))
                 $("#apps").append(optionPrepend + "sudo apt-get install" + optionAppend);
             else
                 $("#apps").append(optionPrepend + "apt-get install" + optionAppend);
             break;
 
-        case "fedora":
+        case distros["Fedora"]:
             $("#apps").append(optionPrepend + "yum install" + optionAppend);
             break;
 
-        case "arch":
+        case distros["Arch Linux"]:
             $("#apps").append(optionPrepend + "pacman -S" + optionAppend);
             break;
 
@@ -245,8 +248,26 @@ function growTextarea(element) {
     };
 }
 
+
 $(document).ready(function() {
 
+    // generates the select menu based on the distros array
+    for(var key in distros) {
+        var html = '<div class="row"><label class="col-xs-12"><input value="' + distros[key] + '" name="distro" type="radio"> ' + key + '</label><br></div>';
+        $("#distro-choice").append(html);
+    }
+
+    // get user agent to select distro
+    var agent = navigator.userAgent;
+    
+    // select the distro based on what they are using (the default will be ubuntu if none is select)
+    for (var key in distros) {
+        if (agent.search(key) != -1) {
+            $("input[value='" + distros[key] + "']").prop("checked", true);
+            break;
+        }
+    }
+    
     // generate the global first
     var d = $.Deferred();
     getapps(d, "global");
@@ -263,7 +284,7 @@ $(document).ready(function() {
 });
 
 // generates the application picker
-$("#distro-choice input").click(function() {
+$("body").on("click", "#distro-choice input", function() {
     distroSelect(this.value);
 });
 

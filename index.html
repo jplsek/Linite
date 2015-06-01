@@ -30,20 +30,7 @@
                 <div class="col-xs-11">
                     <p>Welcome to Linite; an open source, <a href="https://ninite.com/" target="_blank">Ninite</a> inspired web application for Linux distributions.</p>
                     <div class="row" id="distro-info">
-                        <div class="col-xs-12 col-sm-offset-3 col-sm-3" id="distro-choice">
-                            <div class="row">
-                                <label class="col-xs-12"><input type="radio" value="ubuntu" name="distro" checked> Ubuntu</label><br>
-                            </div>
-                            <div class="row">
-                                <label class="col-xs-12"><input type="radio" value="debian" name="distro"> Debian</label><br>
-                            </div>
-                            <div class="row">
-                                <label class="col-xs-12"><input type="radio" value="arch" name="distro"> Arch Linux</label><br>
-                            </div>
-                            <div class="row">
-                                <label class="col-xs-12"><input type="radio" value="fedora" name="distro"> Fedora</label>
-                            </div>
-                        </div>
+                        <div class="col-xs-12 col-sm-offset-3 col-sm-3" id="distro-choice"></div>
                         <div class="col-xs-12 col-sm-6">
                             <ol>
                                 <li>Choose your distribution.</li>
@@ -57,8 +44,8 @@
                     <div class="row center-xs">
                         <div class="col-xs-12 text-left" id="options">
                             <label><input type="checkbox" name="sudo" checked> Sudo?</label>
-                            <label><input type="checkbox" name="update"> Update Repositories?</label>
-                            <label title="Assumes yes, will skip confirm message."><input type="checkbox" name="yes"> Auto?</label>
+                            <label><input type="checkbox" name="update" checked> Update repositories?</label>
+                            <label class="tooltip" title="Assumes yes, will skip confirm message."><input type="checkbox" name="yes"> Auto?</label>
                         </div>
                         <textarea id="apps" class="col-xs-12" readonly></textarea>
                     </div>
