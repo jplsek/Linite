@@ -39,9 +39,12 @@ function addDistro(distro) {
 
     $("#apps").empty();
 
-    if ($("input[name='sudo']").is(':checked')) {
+    // hide update input for fedora because yum updates repos automatically
+    if (distro == "fedora")
+        $("input[name='update']").parent().hide();
+
+    if ($("input[name='sudo']").is(':checked'))
         optionPrepend += "sudo ";
-    }
 
     if ($("input[name='update']").is(':checked')) {
 
@@ -52,14 +55,11 @@ function addDistro(distro) {
                 optionPrepend += "apt-get update && ";
                 break;
 
-            case "fedora":
-                $("input[name='update']").parent().hide();
-                break;
-
             case "arch":
                 optionAppend += "y";
                 break;
 
+            case "fedora":
             case "global":
                 break;
 
