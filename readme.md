@@ -44,7 +44,7 @@ Stucture:
 * Add descriptions for apps
 * Add urls for apps
 * Other distros (gentoo? opensuse?)
-* More apps / reduce apps (build-essential for debian based, add gcc-c++ for g++ on fedora)
+* More apps
 * Remember selected items between distro selection switching
 
 ## Possible future features

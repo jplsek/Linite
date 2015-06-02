@@ -52,6 +52,11 @@
         },
         "OpenJDK Java 8 JDK": {
             "program":"openjdk8-jdk"
+        },
+        "Build Essentials": {
+            "icon":"gcc.png",
+            "program":"build-essential",
+            "description":"Contains gcc, g++, make, and more."
         }
     }
 },

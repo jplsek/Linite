@@ -78,7 +78,6 @@ input {
 }
 
 #distro-info {
-    margin: 0 0 30px;
     text-align:left;
 
     ol {
@@ -100,9 +99,8 @@ input {
     }
 }
 
-.category {
-    white-space: nowrap;
-    flex-basis: auto;
+#distro-choice {
+    margin-bottom: 16px;
 }
 
 .text-center {
@@ -133,3 +131,14 @@ input {
     min-width: 16px;
     display: inline-block;
 }
+
+// start of sm view
+@media only screen and (min-width: 48em) {
+
+    .category {
+        white-space: nowrap;
+        flex-basis: auto;
+    }
+
+}
+

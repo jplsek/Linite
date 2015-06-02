@@ -55,7 +55,6 @@ input {
   margin-bottom: 20px; }
 
 #distro-info {
-  margin: 0 0 30px;
   text-align: left; }
   #distro-info ol {
     margin: 0;
@@ -70,9 +69,8 @@ input {
   #options label {
     margin-right: 20px; }
 
-.category {
-  white-space: nowrap;
-  flex-basis: auto; }
+#distro-choice {
+  margin-bottom: 16px; }
 
 .text-center {
   text-align: center; }
@@ -96,5 +94,10 @@ input {
 .app-icon {
   min-width: 16px;
   display: inline-block; }
+
+@media only screen and (min-width: 48em) {
+  .category {
+    white-space: nowrap;
+    flex-basis: auto; } }
 
 /*# sourceMappingURL=main.css.map */
