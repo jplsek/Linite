@@ -75,10 +75,6 @@
         "OpenJDK Java 8 JDK": {
             "icon":"java.png"
         },
-        "gcc": {
-            "icon":"gcc.png",
-            "program":"gcc"
-        },
         "cmake": {
             "icon":"cmake.png",
             "program":"cmake"

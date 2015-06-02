@@ -44,6 +44,18 @@
         },
         "OpenJDK Java 8 JDK": {
             "program":"java-1.8.0-openjdk"
+        },
+        "gcc": {
+            "icon":"gcc.png",
+            "program":"gcc"
+        },
+        "g++": {
+            "icon":"gcc.png",
+            "program":"gcc-c++"
+        },
+        "make": {
+            "icon":"make.png",
+            "program":"make"
         }
     }
 },
