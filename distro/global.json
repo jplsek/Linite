@@ -14,6 +14,7 @@
         "Guake": {
             "icon":"guake.png",
             "program":"guake",
+            "description":"Dropdown terminal.",
             "url":"http://guake-project.org/"
         },
         "Shutter": {
