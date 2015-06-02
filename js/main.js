@@ -155,7 +155,7 @@ function distroSelect(distro) {
             // 1. selects category
             $.each(category, function (categoryName, application) {
                 //console.log(categoryName);
-                html = "<div class=\"category col-xs-12 col-sm\"><h4>" + categoryName + "</h4>";
+                var html = "<div class=\"category col-xs-12 col-sm\"><h4>" + categoryName + "</h4>";
                 // 2. selects app
                 $.each(application, function (appName, applicationDetails) {
                     //console.log("2: " + appName + "=" + subObject);
@@ -260,7 +260,7 @@ $(document).ready(function() {
     // get user agent to select distro
     var agent = navigator.userAgent;
     
-    // select the distro based on what they are using (the default will be ubuntu if none is select)
+    // select the distro based on what they are using
     for (var key in distros) {
         if (agent.search(key) != -1) {
             $("input[value='" + distros[key] + "']").prop("checked", true);
@@ -277,6 +277,10 @@ $(document).ready(function() {
         console.log("done getting global");
         global = globalapps;
         
+        // the default will be ubuntu if nothing is select
+        if (!$("#distro-choice input").is(":checked"))
+            $("input[value='" + distros["Ubuntu"] + "']").prop("checked", true);
+
         var distro = $("#distro-choice input:checked")[0].value;
         distroSelect(distro);
     });
