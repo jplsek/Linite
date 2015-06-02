@@ -25,7 +25,10 @@ main {
 
 footer {
   height: 60px;
-  background: #404040; }
+  background: #404040;
+  color: #ADADAD;
+  font-size: 0.8rem;
+  text-align: center; }
 
 a {
   text-decoration: none;
@@ -89,5 +92,9 @@ input {
 .blue-bg {
   background: #03A9F4;
   color: white; }
+
+.app-icon {
+  min-width: 16px;
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

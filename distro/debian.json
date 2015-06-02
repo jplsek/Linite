@@ -1,7 +1,7 @@
 [{
     "Utilities": {
         "Owncloud Client": {
-            "icon":"owncloud.jpg",
+            "icon":"owncloud.png",
             "program":"owncloud-client"
         },
         "OpenJDK Java 7 JRE": {
@@ -11,7 +11,7 @@
             "program":"openjdk-8-jdk"
         },
         "Synaptic": {
-            "icon": "synaptic.jpg",
+            "icon": "synaptic.png",
             "program": "synaptic"
         }
     }
@@ -19,11 +19,11 @@
 {
     "Editors": {
         "Vim": {
-            "icon":"vim.jpg",
+            "icon":"vim.png",
             "program":"vim"
         },
         "Eclipse": {
-            "icon":"eclipse.jpg",
+            "icon":"eclipse.png",
             "program":"eclipse"
         },
         "QTCreator": {
@@ -69,7 +69,7 @@
 {
     "Media": {
         "Kodi": {
-            "icon": "kodi.jpg",
+            "icon": "kodi.png",
             "program": "xbmc"
         }
     }

@@ -1,23 +1,23 @@
 [{
     "Utilities": {
         "OpenJDK Java 7 JRE": {
-            "icon":"java.jpg"
+            "icon":"java.png"
         },
         "OpenJDK Java 8 JRE": {
-            "icon":"java.jpg"
+            "icon":"java.png"
         },
         "Deluge": {
-            "icon":"deluge.jpg",
+            "icon":"deluge.png",
             "program":"deluge",
             "url":"http://deluge-torrent.org/"
         },
         "Guake": {
-            "icon":"guake.jpg",
+            "icon":"guake.png",
             "program":"guake",
             "url":"http://guake-project.org/"
         },
         "Shutter": {
-            "icon":"shutter.jpg",
+            "icon":"shutter.png",
             "program":"shutter",
             "description":"Feature-rich screenshot program.",
             "url":"http://shutter-project.org/"
@@ -27,26 +27,26 @@
 {
     "Editors": {
         "Vim": {
-            "icon":"vim.jpg",
+            "icon":"vim.png",
             "program":"vim",
             "url":"http://www.vim.org/"
         },
         "Eclipse": {
-            "icon":"eclipse.jpg",
+            "icon":"eclipse.png",
             "program":"eclipse",
             "url":"https://eclipse.org/"
         },
         "QTCreator": {
-            "icon":"qtcreator.jpg",
+            "icon":"qt.png",
             "url":"https://www.qt.io/"
         },
         "Geany": {
-            "icon":"geany.jpg",
+            "icon":"geany.png",
             "program":"geany",
             "url":"http://www.geany.org/"
         },
         "Emacs": {
-            "icon":"emacs.jpg",
+            "icon":"emacs.png",
             "program":"emacs",
             "url":"https://www.gnu.org/software/emacs/"
         }
@@ -55,10 +55,10 @@
 {
     "Web Browsers": {
         "Chromium": {
-            "icon":"chromium.jpg"
+            "icon":"chromium.png"
         },
         "Midori": {
-            "icon":"midori.jpg",
+            "icon":"midori.png",
             "program":"midori",
             "url":"http://midori-browser.org/"
         }
@@ -67,34 +67,34 @@
 {
     "Developer Tools": {
         "Python 3 Development": {
-            "icon":"python.jpg"
+            "icon":"python.png"
         },
         "OpenJDK Java 7 JDK": {
-            "icon":"java.jpg"
+            "icon":"java.png"
         },
         "OpenJDK Java 8 JDK": {
-            "icon":"java.jpg"
+            "icon":"java.png"
         },
         "gcc": {
-            "icon":"gcc.jpg",
+            "icon":"gcc.png",
             "program":"gcc"
         },
         "cmake": {
-            "icon":"cmake.jpg",
+            "icon":"cmake.png",
             "program":"cmake"
         },
         "Git": {
-            "icon":"git.jpg",
+            "icon":"git.png",
             "program":"git",
             "url":"https://git-scm.com/"
         },
         "Svn": {
-            "icon":"svn.jpg",
+            "icon":"svn.png",
             "program":"svn",
             "url":"https://subversion.apache.org/"
         },
         "Mercurial": {
-            "icon":"mercurial.jpg",
+            "icon":"mercurial.png",
             "program":"mercurial",
             "url":"https://mercurial.selenic.com/"
         }
@@ -103,25 +103,25 @@
 {
     "Graphics": {
         "GIMP": {
-            "icon":"gimp.jpg",
+            "icon":"gimp.png",
             "program":"gimp",
             "description":"Photo retouching, image composition and image authoring.",
             "url":"http://www.gimp.org/"
         },
         "Inkscape": {
-            "icon":"inkscape.jpg",
+            "icon":"inkscape.png",
             "program":"inkscape",
             "description":"Vector graphics editor.",
             "url":"https://inkscape.org/en/"
         },
         "Krita": {
-            "icon":"krita.jpg",
+            "icon":"krita.png",
             "program":"krita",
             "description":"Digital painting and illustration.",
             "url":"https://krita.org/"
         },
         "Blender": {
-            "icon":"blender.jpg",
+            "icon":"blender.png",
             "program":"blender",
             "description":"3D model and animation editor.",
             "url":"https://www.blender.org/"
@@ -131,12 +131,12 @@
 {
     "Office": {
         "LibreOffice": {
-            "icon":"libreoffice.jpg",
+            "icon":"libreoffice.png",
             "program":"libreoffice",
             "url":"https://www.libreoffice.org/"
         },
         "OpenOffice": {
-            "icon":"openoffice.jpg",
+            "icon":"openoffice.png",
             "url":"https://www.openoffice.org/"
         }
     }
@@ -144,23 +144,23 @@
 {
     "Media": {
         "VLC": {
-            "icon":"vlc.jpg",
+            "icon":"vlc.png",
             "program":"vlc",
             "url":"https://www.videolan.org/vlc/index.html"
         },
         "Audacity": {
-            "icon":"audacity.jpg",
+            "icon":"audacity.png",
             "program":"audacity",
             "description":"Record and edit sounds.",
             "url":"http://web.audacityteam.org/"
         },
         "Clementine": {
-            "icon":"clementine.jpg",
+            "icon":"clementine.png",
             "program":"clementine",
             "url":"https://www.clementine-player.org/"
         },
         "Rhythmbox": {
-            "icon":"rhythmbox.jpg",
+            "icon":"rhythmbox.png",
             "program":"rhythmbox"
         }
     }
@@ -168,12 +168,12 @@
 {
     "Messaging": {
         "Thunderbird": {
-            "icon":"thunderbird.jpg",
+            "icon":"thunderbird.png",
             "program":"thunderbird",
             "url":"https://www.mozilla.org/en-US/thunderbird/"
         },
         "Hexchat": {
-            "icon":"hexchat.jpg",
+            "icon":"hexchat.png",
             "program":"hexchat",
             "description":"IRC client based on XChat.",
             "url":"https://hexchat.github.io/"
@@ -183,7 +183,7 @@
 {
     "Gaming": {
         "Steam": {
-            "icon":"steam.jpg",
+            "icon":"steam.png",
             "program":"steam",
             "url":"http://store.steampowered.com/"
         }
@@ -192,19 +192,19 @@
 {
     "Other": {
         "Conky": {
-            "icon":"conky.jpg",
+            "icon":"conky.png",
             "program":"conky",
             "description":"Light-weight system monitor for X.",
             "url":"http://conky.sourceforge.net/"
         },
         "Wine": {
-            "icon":"wine.jpg",
+            "icon":"wine.png",
             "program":"wine",
             "description":"A compatibility layer capable of running Windows applications.",
             "url":"https://www.winehq.org/"
         },
         "Zsh": {
-            "icon":"zsh.jpg",
+            "icon":"zsh.png",
             "program":"zsh",
             "url":"http://zsh.sourceforge.net/"
         }
