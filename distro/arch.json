@@ -1,7 +1,7 @@
 [{
     "Utilities": {
         "Owncloud Client": {
-            "icon":"owncloud.jpg",
+            "icon":"owncloud.png",
             "program":"owncloud-client"
         },
         "OpenJDK Java 7 JRE": {
@@ -15,11 +15,11 @@
 {
     "Editors": {
         "Vim": {
-            "icon":"vim.jpg",
+            "icon":"vim.png",
             "program":"vim"
         },
         "Eclipse": {
-            "icon":"eclipse.jpg",
+            "icon":"eclipse.png",
             "program":"eclipse"
         },
         "QTCreator": {
@@ -65,7 +65,7 @@
 {
     "Media": {
         "Kodi": {
-            "icon": "kodi.jpg",
+            "icon": "kodi.png",
             "program": "kodi"
         }
     }

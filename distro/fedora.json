@@ -11,11 +11,11 @@
 {
     "Editors": {
         "Vim": {
-            "icon":"vim.jpg",
+            "icon":"vim.png",
             "program":"vim"
         },
         "Eclipse": {
-            "icon":"eclipse.jpg",
+            "icon":"eclipse.png",
             "program":"eclipse"
         },
         "QTCreator": {

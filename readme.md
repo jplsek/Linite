@@ -41,7 +41,6 @@ Stucture:
 ```
 
 ## Todo
-* Add app icons
 * Add descriptions for apps
 * Add urls for apps
 * Other distros (gentoo? opensuse?)

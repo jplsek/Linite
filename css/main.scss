@@ -42,6 +42,9 @@ main {
 footer {
     height: 60px;
     background: $gray-bg;
+    color: #ADADAD;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 a {
@@ -126,3 +129,7 @@ input {
     color: white;
 }
 
+.app-icon {
+    min-width: 16px;
+    display: inline-block;
+}
