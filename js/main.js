@@ -253,7 +253,7 @@ $(document).ready(function() {
 
     // generates the select menu based on the distros array
     for(var key in distros) {
-        var html = '<div class="row"><label class="col-xs-12"><input value="' + distros[key] + '" name="distro" type="radio"> <img src="img/' + distros[key] + '.png"> ' + key + '</label><br></div>';
+        var html = '<div class="row"><label class="col-xs-12"><input value="' + distros[key] + '" name="distro" type="radio"> <img src="img/' + distros[key] + '.png" class="app-icon"> ' + key + '</label><br></div>';
         $("#distro-choice").append(html);
     }
 

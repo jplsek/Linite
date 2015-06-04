@@ -91,7 +91,7 @@ input {
   color: white; }
 
 .app-icon {
-  min-width: 16px;
+  max-width: 16px;
   display: inline-block; }
 
 @media only screen and (min-width: 48em) {
