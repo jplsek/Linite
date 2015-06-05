@@ -113,7 +113,6 @@
         },
         "Krita": {
             "icon":"krita.png",
-            "program":"krita",
             "description":"Digital painting and illustration.",
             "url":"https://krita.org/"
         },

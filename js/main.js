@@ -1,7 +1,7 @@
 // Main js file.
 
 // supported distros (so far) (these names are refered to their respective json files)
-var distros = {"Ubuntu":"ubuntu", "Debian":"debian", "Arch Linux":"arch", "Fedora":"fedora"};
+var distros = {"Ubuntu":"ubuntu", "Debian":"debian", "Arch Linux":"arch", "Fedora":"fedora", "Open Suse":"opensuse"};
 
 // global json app information
 var global = null;
@@ -66,6 +66,10 @@ function addDistro(distro) {
             case "global":
                 break;
 
+            case distros["Open Suse"]:
+                optionPrepend += "zypper refresh && ";
+                break;
+
             default:
                 console.log("Distro: " + distro + " not supported, please implement if possible.");
                 break;
@@ -78,6 +82,7 @@ function addDistro(distro) {
             case distros["Ubuntu"]:
             case distros["Debian"]:
             case distros["Fedora"]:
+            case distros["Open Suse"]:
                 optionAppend += " -y";
                 break;
 
@@ -110,6 +115,13 @@ function addDistro(distro) {
 
         case distros["Arch Linux"]:
             $("#apps").append(optionPrepend + "pacman -S" + optionAppend);
+            break;
+
+        case distros["Open Suse"]:
+            if ($("input[name='update']").is(':checked') && $("input[name='sudo']").is(':checked'))
+                $("#apps").append(optionPrepend + "sudo zypper install" + optionAppend);
+            else
+                $("#apps").append(optionPrepend + "zypper install" + optionAppend);
             break;
 
         case "global":

@@ -1,29 +1,17 @@
 [{
     "Utilities": {
-        "Owncloud Client": {
-            "icon":"owncloud.png",
-            "program":"owncloud-client"
-        },
         "OpenJDK Java 7 JRE": {
-            "program":"jre7-openjdk"
+            "program":"java-1_7_0-openjdk"
         },
         "OpenJDK Java 8 JRE": {
-            "program":"jre8-openjdk"
+            "program":"java-1_8_0-openjdk"
         }
     }
 },
 {
     "Editors": {
-        "Vim": {
-            "icon":"vim.png",
-            "program":"vim"
-        },
-        "Eclipse": {
-            "icon":"eclipse.png",
-            "program":"eclipse"
-        },
         "QTCreator": {
-            "program":"qtcreator"
+            "program":"qt-creator"
         }
     }
 },
@@ -31,27 +19,27 @@
     "Web Browsers": {
         "Chromium": {
             "program":"chromium"
-        },
-        "Firefox": {
-            "icon":"firefox.png",
-            "program":"firefox"
         }
     }
 },
 {
     "Developer Tools": {
         "Python 3 Development": {
-            "program":"python3"
+            "program":"python3-devel"
         },
         "OpenJDK Java 7 JDK": {
-            "program":"jdk7-openjdk"
+            "program":"java-1_7_0-openjdk-devel"
         },
         "OpenJDK Java 8 JDK": {
-            "program":"jdk8-openjdk"
+            "program":"java-1_8_0-openjdk-devel"
         },
-        "gcc and g++": {
+        "gcc": {
             "icon":"gcc.png",
             "program":"gcc"
+        },
+        "g++": {
+            "icon":"gcc.png",
+            "program":"gcc-c++"
         },
         "make": {
             "icon":"make.png",
@@ -62,23 +50,19 @@
 {
     "Graphics": {
         "Krita": {
-            "program":"krita"
+            "program":"calligra-krita"
         }
     }
 },
 {
     "Office": {
         "OpenOffice": {
-            "program":"openoffice"
+            "program":"openoffice.org"
         }
     }
 },
 {
     "Media": {
-        "Kodi": {
-            "icon": "kodi.png",
-            "program": "kodi"
-        }
     }
 },
 {
@@ -93,7 +77,7 @@
     "Other": {
         "PlayOnLinux": {
             "icon":"playonlinux.png",
-            "program":"playonlinux"
+            "program":"PlayOnLinux"
         },
         "Virtualbox": {
             "icon":"virtualbox.png",
