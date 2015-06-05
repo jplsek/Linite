@@ -62,6 +62,9 @@
 },
 {
     "Graphics": {
+        "Krita": {
+            "program":"krita"
+        }
     }
 },
 {
@@ -97,6 +100,5 @@
             "icon":"virtualbox.png",
             "program":"virtualbox"
         }
-        
     }
 }]

@@ -43,7 +43,7 @@ Stucture:
 ## Todo
 * Add descriptions for apps
 * Add urls for apps
-* Other distros (gentoo? opensuse?)
+* Other distros (gentoo?)
 * More apps
 * Remember selected items between distro selection switching
 
